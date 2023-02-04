@@ -1,0 +1,19 @@
+/* custom css goes here */
+.content{
+   
+    background-image:url("/Assets/images/bg.jpg");
+   
+    background-size: cover;
+    padding-top: 18%; 
+    padding-bottom: 24%;
+    display: block;
+
+    /* background-color: aqua; */
+text-align: center;
+
+}
+
+    .about_content{
+
+background-color: aqua;
+    }
