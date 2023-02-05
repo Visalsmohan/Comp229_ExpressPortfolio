@@ -1,19 +1,72 @@
 /* custom css goes here */
-.content{
+
+.container{
+  
    
-    background-image:url("/Assets/images/bg.jpg");
-   
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+    max-height: none;
+    width: 100%;
+    height: 79%;  
+    background-image:url("/Assets/images/bg4.jpg");
+    background-position: center;
     background-size: cover;
-    padding-top: 18%; 
-    padding-bottom: 24%;
-    display: block;
-
-    /* background-color: aqua; */
-text-align: center;
-
+    background-repeat: no-repeat;
+    z-index: -1;
+    color: aliceblue;
+    margin-top: 57px;
+ 
 }
 
-    .about_content{
+.icon-cls{
+    display: flex;
+     align-items: end
+  
+  } 
+  .smLinks{
+    color: white;
+    margin: 0.15em;
+    transition: all 0.7s ease;
+  }
+  
+  .icon-cls:hover .smLinks {
+    opacity: 0.2;
+    transition: all .3s;
+  }
+  
+  .icon-cls .smLinks:hover {
+    color: #ffb01d;
+  transform-origin:bottom;
+  transform: scale(1.5);
+  margin: 0.1em;
+    opacity: 1;
+    transition: all .3s;
+  }
 
-background-color: aqua;
-    }
+  .mypicdiv{
+    width: 15vw;
+    margin-top: 10%;
+
+}
+.mypicdiv .mypic{
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 50%;
+}
+
+.content-div{
+    margin: 0.5em;
+    margin-top: 0.15em;
+    margin-bottom: 0.15em;
+    border-radius:10px ;
+    width:100%;  
+   }
+  ul{
+    font-size:20px;
+  }
+
+
+
+
