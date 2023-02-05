@@ -1,8 +1,9 @@
 /* custom css goes here */
 
+
+/* For background container */
 .container{
   
-   
     position: fixed;
     top: 0;
     left: 0;
@@ -13,13 +14,14 @@
     background-image:url("/Assets/images/bg4.jpg");
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     z-index: -1;
     color: aliceblue;
     margin-top: 57px;
  
 }
 
+/* For icons */
 .icon-cls{
     display: flex;
      align-items: end
@@ -45,6 +47,7 @@
     transition: all .3s;
   }
 
+  /* For the picture used in about */
   .mypicdiv{
     width: 15vw;
     margin-top: 10%;
