@@ -1,0 +1,100 @@
+<%- include ../partials/header.ejs %>
+
+<%- include ../partials/main_nav.ejs %>
+
+
+  <!-- Main Content -->
+  <main class="container">
+    <div class="contact">
+        <div class="screen">
+                <div class="app-title">
+                    BUSINESS CONTACTS</div>
+            <br>
+            <% if(typeof displayName == 'string' && displayName) { %>
+
+                <a href="/business-contact-list/add" class="btn btn-primary" role="button" >
+                <i class="fas fa-plus-circle"></i> Add Contact</a>
+                <% } %>
+
+            <br>           
+            <div class="screen-body-item">
+                <div class="app-form">
+
+             <table class="table table-bordered table-striped table-hover">
+                <!-- Header Row-->
+                <tr>
+                    <% if(typeof displayName == 'string' && displayName) { %>
+                        <div class="app-form-group">
+
+                    <th class=" text" style="color: white;" >Contact Name</th>
+                        </div>
+                        <div class="app-form-group">
+
+                    <th class="app-form-control-header text" style="color: white;">Contact Number</th>
+                    </div>
+                    <div class="app-form-group">
+
+                    <th class="app-form-control-header text"  style="color: white;">Email</th>
+                    </div>
+                    <div class="app-form-group">
+                    <th class="app-form-control-header text" style="color: white;">Address</th>
+</div>
+<div class="app-form-group">
+
+                    <th class="app-form-control" ></th>
+                    </div>
+
+                    <th class="app-form-control-control"></th>
+                    </div>
+                    <% } else { %>
+                        <div class="app-form-group">
+
+                        <th class="app-form-control-header" style="color: white;">Contact Name</th>
+                        </div>
+                        <div class="app-form-group">
+
+                        <th class="app-form-control-header" style="color: white;">Contact Number</th>
+                        </div>
+                        <div class="app-form-group">
+
+                        <th class="app-form-control-header" style="color: white;">Email</th>
+                        </div>
+                        <div class="app-form-group">
+
+                        <th class="app-form-control-header" style="color: white;">Address</th>
+                        </div>
+                    <% } %>
+
+                </tr>
+
+                <!-- Repeatable Template Row -->
+
+                <% for(let count = 0; count < BusinessContactList.length; count++) { %>
+                    <tr>
+                        <td class="app-form-control" style="color: white;"><%= BusinessContactList[count].contactName %></td>
+                        <td class="app-form-control" style="color: white;"><%= BusinessContactList[count].contactNo %></td>
+                        <td class="app-form-control" style="color: white;"><%= BusinessContactList[count].email %></td>
+                        <td class="app-form-control" style="color: white;"><%= BusinessContactList[count].address %></td>
+                        <% if(typeof displayName == 'string' && displayName) { %>
+
+                        <td class="app-form-control">
+                            <a href="/business-contact-list/edit/<%= BusinessContactList[count]._id %>" class="btn btn-primary btn-sm">
+                            <i class="fas fa-pencil-alt"></i> Edit</a>
+                        </td>
+                        <td class="app-form-control">
+                            <a href="/business-contact-list/delete/<%= BusinessContactList[count]._id %>" class="btn btn-danger btn-sm">
+                            <i class="fas fa-trash-alt"></i> Delete</a>
+                        </td>
+                        <% }  %>
+
+                    </tr>
+                <% } %>
+            
+            </table>
+    </div>
+    </div>
+    </div>
+  </main>
+<%- include ../partials/bottom_nav.ejs %>  
+
+<%- include ../partials/footer.ejs %>

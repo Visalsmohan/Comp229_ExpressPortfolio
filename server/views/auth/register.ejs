@@ -1,0 +1,59 @@
+<%- include ../partials/header.ejs %>
+
+<%- include ../partials/main_nav.ejs %>
+
+<main class="container">
+    <div class="contact">
+        <div class="screen">
+            <div class="screen-body">
+    <!-- Message Area -->
+    <% if(messages.length > 0) {%>
+        <div class="alert alert-danger">
+            <%= messages %>
+        </div>
+    <% } %>
+    <div class="app-title">
+     REGISTER
+     </div>
+            <form method="POST" autocomplete="off">
+                <div class="screen-body-item">
+                    <div class="app-form">
+                      <div class="app-form-group">
+                        <input class="app-form-control" placeholder="Enter username" id="username" name="username" required autofocus>
+                      </div>
+
+                    <div class="app-form-group">
+                        <input type="password" class="app-form-control" placeholder="Enter password" id="password" name="password" required>
+                      </div>        
+                      <div class="app-form-group">
+                        <input class="app-form-control" placeholder="Enter email" id="email" name="email" required>
+                      </div>   
+                      <div class="app-form-group">
+                        <input class="app-form-control" placeholder="Enter display name" id="displayName" name="displayName" required>
+                      </div>  
+
+                      <div class="app-form-group buttons">
+                        <button  class="app-form-button">
+                    <input type="submit" class="btn btn-success" value="Register">
+                    <a href="/">
+                        <input type="button" class="btn btn-warning" value="Cancel">
+                    </a>
+                </button>
+            </div>
+        </div>
+        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+</main>
+
+
+
+
+
+<%- include ../partials/bottom_nav.ejs %>  
+
+<%- include ../partials/footer.ejs %>

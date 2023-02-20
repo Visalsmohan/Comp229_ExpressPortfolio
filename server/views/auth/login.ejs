@@ -1,0 +1,54 @@
+<%- include ../partials/header.ejs %>
+
+<%- include ../partials/main_nav.ejs %>
+<div class="container">
+    <div class="login__content">
+
+      <% if(messages.length> 0) {%>
+        <div class="alert alert-danger">
+          <%= messages %>
+        </div>
+        <% } %>
+ 
+      <form method="POST" class="login__form">
+        <div class="flex-container">
+          <div>
+            <h1 class="login__title">
+              <span>Welcome</span> mate !
+            </h1>
+          </div>
+          <div class="login__description" >
+            <p >
+              Please login to continue.
+            </p>
+          </div>
+    
+          <div>
+            <div class="login__inputs">
+              <div>
+                <label for="" class="login__label">Email</label>
+                <input type="text" placeholder="Enter your username" name="username" required class="login__input">
+              </div>
+    
+              <div>
+                <label for="" class="login__label">Password</label>
+                <div class="login__box">
+                  <input type="password" placeholder="Enter your password" required class="login__input" name="password" id="input-pass">
+                </div>
+              </div>
+            </div>
+    
+          </div>
+    
+          <div class="login_btn">
+              <button class="login__button" type="submit" value="Login">Log In</button>
+          </div>
+        </div>
+        
+      </form>
+    </div>
+  </div>
+
+<%- include ../partials/bottom_nav.ejs %>  
+
+<%- include ../partials/footer.ejs %>
